@@ -10,6 +10,7 @@ public class CoffeeMakerTest {
 
 	@Before
 	public void setUp() throws Exception {
+		
 	}
 
 	@After
