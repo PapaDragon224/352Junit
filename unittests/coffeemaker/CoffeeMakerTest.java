@@ -8,9 +8,16 @@ import org.junit.Test;
 
 public class CoffeeMakerTest {
 
+	private Inventory inventory;
+	private RecipeBook recipeBook;
+	private Recipe recipe;
+	
+	
 	@Before
 	public void setUp() throws Exception {
-		
+		this.inventory = new Inventory();
+		this.recipeBook = new RecipeBook();
+		this.recipe = new Recipe();
 	}
 
 	@After
@@ -21,5 +28,6 @@ public class CoffeeMakerTest {
 	public void test() {
 		fail("Not yet implemented");
 	}
-
+	
+		
 }
