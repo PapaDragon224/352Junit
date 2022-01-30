@@ -126,11 +126,12 @@ public class RecipeBookTest {
 	
 	@Test
 	public void editRecipeTest() {
-		recipeBook.addRecipe(new Recipe());
 		Recipe recipe = new Recipe();
 		recipe.setName("Test");
-		recipeBook.editRecipe(0, recipe);
-		assertEquals(recipeBook.getRecipes()[0],recipe);	
+		recipeBook.addRecipe(recipe);
+		Recipe recipe2 = new Recipe();
+		recipeBook.editRecipe(0,recipe2 );
+		assertEquals("Test",recipeBook.getRecipes()[0].getName());	
 	}
 	
 
