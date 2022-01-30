@@ -49,10 +49,6 @@ public class RecipeBookTest {
 		assertArrayEquals(newValue,recipeBook.getRecipes());	
 	}
 	
-	@Test
-	public void addRecipesReturnTest() {
-		assertEquals(true,recipeBook.addRecipe(new Recipe()));	
-	}
 	
 	@Test
 	public void addDuplicateRecipesTest() {
@@ -104,6 +100,13 @@ public class RecipeBookTest {
 	}
 	
 	@Test
+	public void deleteRecipesEdgeCaseTest() {
+		Recipe recipe = new Recipe();
+		recipeBook.addRecipe(recipe);
+		assertEquals(null,recipeBook.deleteRecipe(4));
+	}
+	
+	@Test
 	public void deleteRecipesTest() {
 		Recipe recipe = new Recipe();
 		recipeBook.addRecipe(recipe);
@@ -130,14 +133,6 @@ public class RecipeBookTest {
 		assertEquals(recipeBook.getRecipes()[0],recipe);	
 	}
 	
-	@Test
-	public void editRecipeNameTest() {
-		Recipe recipe = new Recipe();
-		recipe.setName("Test");
-		recipeBook.addRecipe(recipe);
-		String name= recipeBook.editRecipe(0, new Recipe());
-		assertEquals("Test",name);	
-	}
 
 
 
