@@ -1,13 +1,9 @@
 package coffeemaker;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.fail;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import coffeemaker.exceptions.InventoryException;
 
 public class InventoryTest {
